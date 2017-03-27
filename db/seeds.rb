@@ -24,7 +24,7 @@ location = Location.create([
   {
     # latitude: 45.4888311,
     # longitude: -122.6235723,
-    address: 'SE Division St, Portland, OR 97202',
+    address: '3226 SE Division St, Portland, OR 97202',
     description: 'Pok Pok SE Location',
     title: 'Pok Pok'
   }
