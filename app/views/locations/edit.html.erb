@@ -2,5 +2,9 @@
 
 <%= render 'form', location: @location %>
 
-<%= link_to 'Show', @location %> |
-<%= link_to 'Back', locations_path %>
+<button class="btn btn-default">
+  <%= link_to 'Show', @location %>
+</button>
+<button class="btn btn-default">
+  <%= link_to 'Back', locations_path %>
+</button>
