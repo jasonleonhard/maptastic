@@ -1,3 +1,8 @@
+<style type="text/css">
+  .destroy { padding: 3px 20px; }
+
+</style>
+
 <p id="notice"><%= notice %></p>
 <%= render partial: "shared/map" %><br>
 <!-- < %= link_to 'New Location', new_location_path %> -->
@@ -28,15 +33,23 @@
         <td><%= location.description %></td>
         <td><%= location.title %></td>
 
-        <td><%= link_to 'Show', location %></td>
-        <td><%= link_to 'Edit', edit_location_path(location) %></td>
 
-      <!-- typical rails -->
-        <!-- <td>< %= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        <td class="dropdown no_bottom">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu less_width" aria-labelledby="dropdownMenu1">
 
-      <!-- ajax version, allows destroy of item without page refresh, first time only -->
-        <td class="destroy">Destroy</td>
+            <li><%= link_to 'Show', location %></li>
+            <li><%= link_to 'Edit', edit_location_path(location) %></li>
 
+          <!-- typical rails -->
+            <!-- <li>< %= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></li> -->
+
+          <!-- ajax version, allows destroy of item without page refresh, first time only -->
+            <li class="destroy">Destroy</li>
+          </ul>
+      </td>
       </tr>
     <% end %>
   </tbody>
